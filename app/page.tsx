@@ -46,11 +46,14 @@ export default function Home() {
       <main className="flex-1 flex flex-col items-center justify-center w-full max-w-2xl mx-auto gap-12">
         {/* Header */}
         <div className="flex flex-col items-center gap-4 text-center">
-          <h1 className="text-6xl font-semibold tracking-wide text-navy italic">
+          <p className="text-sm font-light tracking-widest uppercase text-navy/60">
             Uncharted
+          </p>
+          <h1 className="text-4xl font-semibold tracking-wide text-navy leading-loose">
+            Is your thought original?
           </h1>
-          <p className="text-2xl font-light text-navy/70 tracking-widest uppercase text-sm">
-            Is your idea original?
+          <p className="text-lg font-light text-navy/70 leading-relaxed max-w-lg" style={{fontFamily: "Helvetica, Arial, sans-serif"}}>
+            Is your idea new? Has someone asked that question already? With the power of AI, you can find out if you&apos;re an original thinker or just a shmuck like the rest of us :)
           </p>
         </div>
 
@@ -63,6 +66,7 @@ export default function Home() {
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Describe your idea, question, or thought..."
               className="w-full px-6 py-4 text-lg rounded-2xl border border-navy/20 bg-white/60 text-navy placeholder-navy/40 outline-none transition-all focus:border-navy/50 focus:ring-2 focus:ring-navy/10 backdrop-blur-sm"
+              style={{fontFamily: "Helvetica, Arial, sans-serif"}}
               disabled={loading}
             />
           </div>
@@ -125,7 +129,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="pb-8 pt-12 text-sm text-navy/40 text-center">
         <p className="tracking-widest uppercase text-xs">Think first.</p>
-        <p className="mt-1">© {new Date().getFullYear()} Charlotte Siller. All rights reserved.</p>
+        <p className="mt-1 text-xs" style={{fontFamily: "Helvetica, Arial, sans-serif"}}>© {new Date().getFullYear()} Charlotte Siller. All rights reserved.</p>
       </footer>
     </div>
   );

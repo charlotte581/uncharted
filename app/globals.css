@@ -1,5 +1,21 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Lovers in New York";
+  src: url("/fonts/lovers-in-new-york.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lovers in New York";
+  src: url("/fonts/lovers-in-new-york-bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme inline {
   --color-navy: #1B3664;
   --color-navy-light: #2A4A7F;
@@ -11,7 +27,7 @@
 body {
   background: #D4E4F0;
   color: #1B3664;
-  font-family: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  font-family: "Lovers in New York", var(--font-cormorant), Georgia, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
