@@ -108,7 +108,7 @@ export default function Home() {
         {result && (
           <div className="w-full text-center animate-fade-in">
             <div
-              className={`text-7xl font-semibold italic mb-4 ${
+              className={`text-4xl font-semibold italic mb-10 ${
                 result.isOriginal ? "text-green-600" : "text-red-500"
               }`}
             >
@@ -128,7 +128,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="pb-8 pt-12 text-sm text-navy/40 text-center">
-        <p className="tracking-widest uppercase text-xs">Think first.</p>
+        <p className="tracking-widest uppercase text-xs" style={{fontFamily: "Helvetica, Arial, sans-serif"}}>Think first.</p>
         <p className="mt-1 text-xs" style={{fontFamily: "Helvetica, Arial, sans-serif"}}>© {new Date().getFullYear()} Charlotte Siller. All rights reserved.</p>
       </footer>
     </div>
