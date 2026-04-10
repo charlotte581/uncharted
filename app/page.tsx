@@ -64,7 +64,7 @@ export default function Home() {
             Is your thought original?
           </h1>
           <p className="text-lg font-light text-navy/70 leading-relaxed max-w-lg" style={{fontFamily: "Helvetica, Arial, sans-serif"}}>
-            Is your idea new? Has someone asked that question already? With the power of AI, you can find out if you&apos;re an original thinker or just a shmuck like the rest of us :)
+            Is your idea new? Has someone asked that question already? With the power of AI, you can find out if you&apos;re an original thinker or just a schmuck like the rest of us :)
           </p>
         </div>
 
