@@ -42,10 +42,10 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-6 bg-light-blue">
-      <main className="w-full max-w-2xl flex flex-col items-center gap-12 -mt-16">
+    <div className="flex flex-col min-h-screen px-6 bg-light-blue">
+      <main className="flex-1 flex flex-col items-center justify-center w-full max-w-2xl mx-auto gap-12">
         {/* Header */}
-        <div className="flex flex-col items-center gap-4 text-center pt-16">
+        <div className="flex flex-col items-center gap-4 text-center">
           <h1 className="text-6xl font-semibold tracking-wide text-navy italic">
             Uncharted
           </h1>
@@ -123,7 +123,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="mt-auto pb-8 pt-12 text-sm text-navy/40 text-center">
+      <footer className="pb-8 pt-12 text-sm text-navy/40 text-center">
         <p className="tracking-widest uppercase text-xs">Think first.</p>
         <p className="mt-1">© {new Date().getFullYear()} Charlotte Siller. All rights reserved.</p>
       </footer>
