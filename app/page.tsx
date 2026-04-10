@@ -121,8 +121,9 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="mt-auto pb-8 pt-12 text-sm text-gray-400">
-        Think first.
+      <footer className="mt-auto pb-8 pt-12 text-sm text-gray-400 text-center">
+        <p>Think first.</p>
+        <p className="mt-1">© {new Date().getFullYear()} Charlotte Siller. All rights reserved.</p>
       </footer>
     </div>
   );
