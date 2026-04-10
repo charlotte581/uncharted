@@ -42,14 +42,16 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-6">
-      <main className="w-full max-w-2xl flex flex-col items-center gap-12">
+    <div className="flex flex-col items-center justify-center min-h-screen px-6 bg-light-blue">
+      <main className="w-full max-w-2xl flex flex-col items-center gap-12 -mt-16">
         {/* Header */}
-        <div className="flex flex-col items-center gap-4 text-center">
-          <h1 className="text-5xl font-bold tracking-tight text-gray-900">
+        <div className="flex flex-col items-center gap-4 text-center pt-16">
+          <h1 className="text-6xl font-semibold tracking-wide text-navy italic">
             Uncharted
           </h1>
-          <p className="text-xl text-gray-500">Is your idea original?</p>
+          <p className="text-2xl font-light text-navy/70 tracking-widest uppercase text-sm">
+            Is your idea original?
+          </p>
         </div>
 
         {/* Search Box */}
@@ -60,14 +62,14 @@ export default function Home() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Describe your idea, question, or thought..."
-              className="w-full px-6 py-4 text-lg rounded-2xl border border-gray-200 bg-white text-gray-900 placeholder-gray-400 outline-none transition-all focus:border-butter focus:ring-2 focus:ring-butter/30"
+              className="w-full px-6 py-4 text-lg rounded-2xl border border-navy/20 bg-white/60 text-navy placeholder-navy/40 outline-none transition-all focus:border-navy/50 focus:ring-2 focus:ring-navy/10 backdrop-blur-sm"
               disabled={loading}
             />
           </div>
           <button
             type="submit"
             disabled={loading || !query.trim()}
-            className="w-full py-4 rounded-2xl bg-butter text-gray-900 font-semibold text-lg transition-all hover:bg-butter-dark disabled:opacity-40 disabled:cursor-not-allowed"
+            className="w-full py-4 rounded-2xl bg-eggshell text-navy font-semibold text-lg tracking-wide transition-all hover:bg-eggshell-dark disabled:opacity-40 disabled:cursor-not-allowed"
           >
             {loading ? (
               <span className="inline-flex items-center gap-2">
@@ -102,13 +104,13 @@ export default function Home() {
         {result && (
           <div className="w-full text-center animate-fade-in">
             <div
-              className={`text-6xl font-bold mb-4 ${
-                result.isOriginal ? "text-green-500" : "text-red-400"
+              className={`text-7xl font-semibold italic mb-4 ${
+                result.isOriginal ? "text-green-600" : "text-navy"
               }`}
             >
-              {result.isOriginal ? "Yes" : "No"}
+              {result.isOriginal ? "Yes." : "No."}
             </div>
-            <p className="text-lg text-gray-600 leading-relaxed max-w-lg mx-auto">
+            <p className="text-lg font-light text-navy/80 leading-relaxed max-w-lg mx-auto">
               {result.explanation}
             </p>
           </div>
@@ -116,13 +118,13 @@ export default function Home() {
 
         {/* Error */}
         {error && (
-          <p className="text-red-400 text-center animate-fade-in">{error}</p>
+          <p className="text-red-500 text-center animate-fade-in">{error}</p>
         )}
       </main>
 
       {/* Footer */}
-      <footer className="mt-auto pb-8 pt-12 text-sm text-gray-400 text-center">
-        <p>Think first.</p>
+      <footer className="mt-auto pb-8 pt-12 text-sm text-navy/40 text-center">
+        <p className="tracking-widest uppercase text-xs">Think first.</p>
         <p className="mt-1">© {new Date().getFullYear()} Charlotte Siller. All rights reserved.</p>
       </footer>
     </div>

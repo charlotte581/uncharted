@@ -1,15 +1,17 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-butter: #F5D547;
-  --color-butter-dark: #E8C832;
-  --color-butter-light: #FBF0C4;
+  --color-navy: #1B3664;
+  --color-navy-light: #2A4A7F;
+  --color-light-blue: #D4E4F0;
+  --color-eggshell: #F0EDE4;
+  --color-eggshell-dark: #E3DFD5;
 }
 
 body {
-  background: #ffffff;
-  color: #1d1d1f;
-  font-family: "Avenir", "Avenir Next", "Montserrat", sans-serif;
+  background: #D4E4F0;
+  color: #1B3664;
+  font-family: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
