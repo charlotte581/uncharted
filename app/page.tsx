@@ -109,12 +109,12 @@ export default function Home() {
           <div className="w-full text-center animate-fade-in">
             <div
               className={`text-7xl font-semibold italic mb-4 ${
-                result.isOriginal ? "text-green-600" : "text-navy"
+                result.isOriginal ? "text-green-600" : "text-red-500"
               }`}
             >
-              {result.isOriginal ? "Yes." : "No."}
+              {result.isOriginal ? "Yes." : "Nope! Not original!"}
             </div>
-            <p className="text-lg font-light text-navy/80 leading-relaxed max-w-lg mx-auto">
+            <p className="text-lg font-light text-navy/80 leading-relaxed max-w-lg mx-auto" style={{fontFamily: "Helvetica, Arial, sans-serif"}}>
               {result.explanation}
             </p>
           </div>
