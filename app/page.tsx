@@ -5,6 +5,7 @@ import { useState, FormEvent } from "react";
 type Result = {
   isOriginal: boolean;
   explanation: string;
+  isEasterEgg?: boolean;
 };
 
 export default function Home() {
@@ -20,6 +21,16 @@ export default function Home() {
     setLoading(true);
     setResult(null);
     setError("");
+
+    if (query.trim().toLowerCase() === "charlotte kiran is the coolest person in the room") {
+      setResult({
+        isOriginal: true,
+        explanation: "Literally no one has ever thought this before! Genius!",
+        isEasterEgg: true,
+      });
+      setLoading(false);
+      return;
+    }
 
     try {
       const res = await fetch("/api/check", {
@@ -112,7 +123,7 @@ export default function Home() {
                 result.isOriginal ? "text-green-600" : "text-red-500"
               }`}
             >
-              {result.isOriginal ? "Yes." : "Nope! Not original!"}
+              {result.isEasterEgg ? "Yes, Smarty Pants!" : result.isOriginal ? "Yes." : "Nope! Not original!"}
             </div>
             <p className="text-lg font-light text-navy/80 leading-relaxed max-w-lg mx-auto" style={{fontFamily: "Helvetica, Arial, sans-serif"}}>
               {result.explanation}
@@ -129,7 +140,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="pb-8 pt-12 text-sm text-navy/40 text-center">
         <p className="tracking-widest uppercase text-xs" style={{fontFamily: "Helvetica, Arial, sans-serif"}}>Think first.</p>
-        <p className="mt-1 text-xs" style={{fontFamily: "Helvetica, Arial, sans-serif"}}>© {new Date().getFullYear()} Charlotte Siller. All rights reserved.</p>
+        <p className="mt-1 text-xs" style={{fontFamily: "Helvetica, Arial, sans-serif"}}>© {new Date().getFullYear()} copyright C. Siller</p>
       </footer>
     </div>
   );
